@@ -12,3 +12,10 @@
     color: #005D8F;
     align-items: right;
 }
+
+.nav-item .nav-icon {
+    color: #005D8F;
+    width: 18px !important;
+    height: 18px !important;
+    padding-top: 5px;
+}
