@@ -1,0 +1,14 @@
+#logo-navbar {
+    color: black;
+    height: 15%;
+    width: 170px;
+}
+
+.navbar {
+    background-color: #F4F4F4 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #005D8F;
+    align-items: right;
+}
