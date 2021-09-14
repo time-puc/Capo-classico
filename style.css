@@ -26,6 +26,36 @@
     margin-right: 10rem;
 }
 
+#procureseuveiculo {
+    height: 200px;
+    width: 100%;
+    background-color: #F4F4F4;
+    align-items: center;
+}
+
+#procureseuveiculo h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #005D8F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#procureseuveiculo button, input{
+    justify-content: center;
+    align-items: center;
+}
+
+#procureseuveiculo button {
+    background-color: #005D8F;
+    color: #fff;
+    margin-left: 10px;
+}
+
+#procureseuveiculo .container {
+    width: 26%;
+}
+
 .nav-links {
     padding-left: 5rem;
 }
