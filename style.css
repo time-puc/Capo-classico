@@ -1,7 +1,7 @@
-#logo-navbar {
-    color: black;
+#navbar-logo {
     height: 15%;
     width: 170px;
+    margin-left: 10rem;
 }
 
 .navbar {
@@ -10,12 +10,22 @@
 
 .navbar-dark .navbar-nav .nav-link {
     color: #005D8F;
-    align-items: right;
 }
 
-.nav-item .nav-icon {
-    color: #005D8F;
-    width: 18px !important;
-    height: 18px !important;
+.nav-link .nav-icon {
+    height: 23px !important;
+    width: 25px !important;
     padding-top: 5px;
+}
+
+#header-icons {
+    margin-right: 3rem;
+}
+
+#icons-div {
+    margin-right: 10rem;
+}
+
+.nav-links {
+    padding-left: 5rem;
 }
