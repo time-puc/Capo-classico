@@ -1,0 +1,34 @@
+#navbar-logo {
+    height: 15%;
+    width: 170px;
+    margin-left: 10rem;
+}
+
+.navbar {
+    background-color: #F4F4F4 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #005D8F;
+}
+
+.nav-link .nav-icon {
+    height: 23px !important;
+    width: 25px !important;
+    padding-top: 5px;
+}
+
+.nav-links {
+    padding-left: 5rem;
+}
+
+#procureseuveiculo button  {
+    background-color: #005D8F;
+    color: #fff;
+    margin-right: 5rem;
+    margin-left: 5rem;
+}
+
+.btn-primary {
+        background-color: #005D8F;
+}
