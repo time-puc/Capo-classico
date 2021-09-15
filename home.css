@@ -25,10 +25,18 @@
 #procureseuveiculo button  {
     background-color: #005D8F;
     color: #fff;
-    margin-right: 5rem;
-    margin-left: 5rem;
+    padding-right: 5rem;
+    padding-left: 5rem;
 }
 
 .btn-primary {
         background-color: #005D8F;
+}
+
+.container {
+    width: 100%;
+    padding-right: 150px;
+    padding-left: 150px;
+    margin-right: auto;
+    margin-left: auto;
 }
