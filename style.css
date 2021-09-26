@@ -68,10 +68,27 @@ body {
     background-color: #005D8F;
 }
 
+/* Mapa do site */
+
+.mapadosite {
+    background-color: #F4F4F4;
+    color: #005D8F;
+    white-space: nowrap;
+    max-height: 30rem;
+}
+
+.mapadosite a {
+    color: #005D8F;
+}
+
+.mapadosite a, p , h6{
+    font-size: 14px;
+}
+
 /* Footer */
 
 footer {
-    background-color: #F4F4F4;
+    background-color: #EFEDED;
     width: 100%;
     margin-top: auto;
     position: relative;
