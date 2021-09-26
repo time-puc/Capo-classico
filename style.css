@@ -72,13 +72,17 @@ body {
 
 .mapadosite {
     background-color: #F4F4F4;
-    margin-bottom: 0;
     color: #005D8F;
     white-space: nowrap;
+    max-height: 30rem;
 }
 
-.mapadosite a{
+.mapadosite a {
     color: #005D8F;
+}
+
+.mapadosite a, p , h6{
+    font-size: 14px;
 }
 
 /* Footer */
