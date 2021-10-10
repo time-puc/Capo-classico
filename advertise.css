@@ -1,9 +1,10 @@
 html,
 body {
   height: 100%;
+  background-color: #FFFFFF;
 }
 
-/* Navbar */
+/* Navbar home*/
 
 #navbar-logo {
     height: 15%;
@@ -108,4 +109,47 @@ footer {
     padding: 0;
     margin: 0;
     font-size: 0.8rem;
+}
+
+.content {
+    background-color: #FFFFFF;
+}
+
+/* Anunciar veículo */
+/* Css dos selects e seus títulos */
+
+.advertise-title {
+    color: #005D8F;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 1.9rem !important;
+}
+
+label {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 14;
+}
+
+.container h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #7F7F7F;
+}
+
+.select-label {
+    color: #005D8F;
+}
+
+.select .custom-select {
+    color: #005D8F !important;
+}
+
+.link-flow {
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 0.1rem;
+    color: #D5D2D2;
+}
+
+.col textarea {
+    min-width: 100%;
 }
