@@ -110,6 +110,13 @@ footer {
     font-size: 0.8rem;
 }
 
+.space-btw {
+    display: -webkit-box!important;
+    -webkit-box-pack: justify!important;
+    -ms-flex-pack: justify!important;
+    justify-content: space-between!important;
+}
+
 /* Carrosel */
 
 /*
@@ -264,6 +271,7 @@ footer {
 .news-col span {
     color: #005D8F;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
     font-weight: bold;
     padding-left: 1rem;
     margin-top: 100px;
