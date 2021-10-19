@@ -83,7 +83,7 @@ body {
     color: #005D8F;
 }
 
-.mapadosite a, p , h6{
+.mapadosite a p h6{
     font-size: 14px;
 }
 
@@ -244,6 +244,42 @@ footer {
     }
 }
 
+.carousel-title {
+    color: #005D8F;
+    font-family: Arial;
+    font-size: 1rem !important;
+}
+
 .carousel {
     min-width: fit-content;
+}
+
+
+/* Novidade em veiculos */
+
+.news-img {
+    max-width: 15rem;
+}
+
+.news-col span {
+    color: #005D8F;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-left: 1rem;
+    margin-top: 100px;
+}
+
+.advertise-title {
+    padding-top: 0.5rem;
+    color: #005D8F;
+    font-family: Arial;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.news-col p {
+    color: #005D8F;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+    font-size: 0.9rem;
 }
