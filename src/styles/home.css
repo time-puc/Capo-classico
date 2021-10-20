@@ -291,3 +291,11 @@ footer {
     margin-bottom: 0;
     font-size: 0.9rem;
 }
+
+
+/* Imagens dos carros home */
+
+.car-section {
+    max-width: max-content;
+    overflow: hidden;
+}
