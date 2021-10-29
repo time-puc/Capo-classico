@@ -366,9 +366,6 @@
             <a class="footer-text" href="#"><i class="footer-icons" data-feather="twitter"></i></a>
         </div>
     </footer>
-
-    <!-- Optional JavaScript -->
-    <script src="script.js"></script>
     <script>
         feather.replace()
     </script>
@@ -382,6 +379,20 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script>
+
+      async function getContent() {
+        try {
+          const response = await fetch('http://localhost:4000/')
+          console.log(response)
+        } catch (error) {
+          console.log('error')
+        }
+      }
+      getContent()
+
+    </script>
+
 </body>
 
 </html>
