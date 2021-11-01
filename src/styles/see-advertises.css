@@ -202,7 +202,7 @@ label {
 
 .info-box {
     background-color: #F5F5F5;
-    height: 35rem;
+    /* height: 35rem; */
     min-height: fit-content;
     width: 50vw;
     border-radius: 5%;
@@ -250,7 +250,7 @@ label {
 
 .info-form-box {
     background-color: #F5F5F5;
-    min-height: max-content;
+    min-height: fit-content;
     min-width: fit-content;
     width: 24vw;
     border-radius: 5%;
@@ -264,15 +264,27 @@ label {
     font-size: 2rem !important;
 }
 
-.info-form-box label{
+.info-form-box label {
     color: #005D8F;
 }
 
 .info-form-box input {
-    background-color: #707070;
+    background-color: #f5f5f5;
+    border-color: #005D8F;
+    border-left: 10px;
+    border-right: 10px;
+    border-top: 10px;
 }
 
-.info-form-box button{
+.info-form-box input:focus {
+    background-color: #f5f5f5;
+    border-color: #005D8F;
+    border-left: 10px;
+    border-right: 10px;
+    border-top: 10px;
+}
+
+.info-form-box button {
     align-content: center;
     width: 100%;
 }
