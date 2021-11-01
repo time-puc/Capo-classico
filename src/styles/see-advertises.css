@@ -250,21 +250,29 @@ label {
 
 .info-form-box {
     background-color: #F5F5F5;
-    height: 30rem;
-    min-height: fit-content;
+    min-height: max-content;
     min-width: fit-content;
     width: 24vw;
     border-radius: 5%;
-    box-shadow: 9px 6px 15px 0px rgba(0,0,0,0.38)
+    box-shadow: 9px 6px 15px 0px rgba(0,0,0,0.38);
+    padding: 20px;
 }
 
 .price-title {
-    padding-left: 30px;
     color: #005D8F;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.9rem !important;
+    font-size: 2rem !important;
 }
 
-.info-form-box  label{
+.info-form-box label{
     color: #005D8F;
+}
+
+.info-form-box input {
+    background-color: #707070;
+}
+
+.info-form-box button{
+    align-content: center;
+    width: 100%;
 }
