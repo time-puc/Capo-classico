@@ -11,6 +11,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/see-advertises.css">
     <script src="https://unpkg.com/feather-icons"></script>
+    <script src="../scripts/see-advertises.js"></script>
     <title>Capô Clássico</title>
 </head>
 
@@ -109,24 +110,24 @@
             <div class="info-form-box">
                 <h1 class="text-uppercase price-title mb-3">R$ 51.000</h1>
                 <form>
-                    <div class="form-group ">
-                        <!-- <label for="name-form">Nome</label> -->
+                    <!-- <div class="form-group ">
+                        <label for="name-form">Nome</label>
                         <input type="text" class="form-control" id="name-form" placeholder="👤    Nome">
                     </div>
                     <div class="form-group">
-                        <!-- <label for="email-form">E-mail</label> -->
+                        <label for="email-form">E-mail</label>
                         <input type="email" class="form-control" id="email-form" placeholder="📧    E-mail">
                     </div>
                     <div class="form-group">
-                        <!-- <label for="phone-form">Telefone</label> -->
+                        <label for="phone-form">Telefone</label>
                         <input type="tel" class="form-control" id="phone-form" placeholder="📞    Telefone">
-                    </div>
+                    </div> -->
                     <div class="form-group">
                         <label for="mensagem-form">Mensagem</label>
-                        <textarea id="mensagem-form" class="form-control" rows="5" cols="33" id="email-form"
+                        <textarea id="mensagem-form" class="form-control" rows="13" cols="33" id="email-form"
                             placeholder="Olá, estou interessado no veículo. Por favor entre em contato."></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    <button type="submit" onclick="sendMessage()" class="btn btn-primary">Enviar Mensagem</button>
                 </form>
             </div>
         </div>
