@@ -153,3 +153,7 @@ label {
 .col textarea {
     min-width: 100%;
 }
+
+.btn-send-form {
+    width: 80%;
+}
