@@ -44,6 +44,8 @@
 
   <div class="content container">
     <small class="link-flow ml-5 mb-3">Home → Perfil → Anuncie seu veículo</small>
+
+
     <h1 class="text-uppercase advertise-title mt-2">Anuncie seu veículo</h1>
     <form>
       <div class="container ml-5 mr-5">
@@ -51,8 +53,8 @@
         <div class="row form-group">
           <div class="col">
             <label class="select-label" for="brand">Marca do veículo</label>
-            <select class="custom-select select" id="brand">
-              <option selected>Escolha</option>
+            <select class="custom-select select" required id="brand">
+              <option disabled selected value disabled value>Escolha</option>
               <option value="1">Chevrolet</option>
               <option value="2">BMW</option>
               <option value="3">Fiat</option>
@@ -61,14 +63,14 @@
             <!-- Small pode ser utilizado para dar uma descrição do select -->
             <small class="form-text text-muted">Texto descritivo</small>
 
-            <label class="select-label" for="brand">Modelo do veículo</label>
-            <select class="custom-select select" id="brand">
-              <option selected>Escolha</option>
+            <label class="select-label" for="model">Modelo do veículo</label>
+            <select class="custom-select select" required id="model">
+              <option selected disabled value>Escolha</option>
             </select>
 
-            <label class="select-label" for="brand">Categoria</label>
-            <select class="custom-select select" id="brand">
-              <option selected>Escolha</option>
+            <label class="select-label" for="category">Categoria</label>
+            <select class="custom-select select" required id="category">
+              <option selected disabled value>Escolha</option>
             </select>
             <!-- Small pode ser utilizado para dar uma descrição do select -->
             <small class="form-text text-muted">Texto descritivo</small>
@@ -77,95 +79,89 @@
 
               <div class="col">
                 <label class="select-label" for="year">Ano</label>
-                <select class="custom-select select" id="brand">
-                  <option selected>Escolha</option>
+                <select class="custom-select select" required id="year">
+                  <option selected disabled value>Escolha</option>
                 </select>
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
                 <small class="form-text text-muted">Texto descritivo</small>
 
                 <label class="select-label" for="condition">Condição</label>
-                <select class="custom-select select" id="brand">
-                  <option selected>Escolha</option>
+                <select class="custom-select select" required id="condition">
+                  <option selected disabled value>Escolha</option>
                 </select>
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
                 <small class="form-text text-muted">Texto descritivo</small>
 
                 <label class="select-label" for="transmission">Transmissão</label>
-                <select class="custom-select select" id="brand">
-                  <option selected>Escolha</option>
+                <select class="custom-select select" required id="transmission">
+                  <option selected disabled value>Escolha</option>
                 </select>
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
                 <small class="form-text text-muted">Texto descritivo</small>
 
-                <label class="select-label" for="transmission">Combustível</label>
-                <select class="custom-select select" id="brand">
-                  <option selected>Escolha</option>
+                <label class="select-label" for="fuel">Combustível</label>
+                <select class="custom-select select" required id="fuel">
+                  <option selected disabled value>Escolha</option>
                 </select>
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
                 <small class="form-text text-muted">Texto descritivo</small>
 
                 <label class="select-label" for="steering">Direção</label>
-                <select class="custom-select select" id="brand">
-                  <option selected>Escolha</option>
+                <select class="custom-select select" required id="steering">
+                  <option selected disabled value>Escolha</option>
                 </select>
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
                 <small class="form-text text-muted">Texto descritivo</small>
               </div>
               <div class="col">
                 <label class="select-label" for="version">Versão</label>
-                <select class="custom-select select" id="brand">
-                  <option selected>Escolha</option>
+                <select class="custom-select select" required id="version">
+                  <option selected disabled value>Escolha</option>
                 </select>
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
                 <small class="form-text text-muted">Texto descritivo</small>
 
                 <label class="select-label" for="km">Quilometragem</label>
-                <select class="custom-select select" id="brand">
-                  <option selected>Escolha</option>
-                </select>
+                <input type="number" class="form-control" required id="km" aria-describedby="basic-addon3">
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
                 <small class="form-text text-muted">Texto descritivo</small>
 
                 <label class="select-label" for="doors">Portas</label>
-                <select class="custom-select select" id="brand">
-                  <option selected>Escolha</option>
+                <select class="custom-select select" required id="doors">
+                  <option selected disabled value>Escolha</option>
                 </select>
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
                 <small class="form-text text-muted">Texto descritivo</small>
 
                 <label class="select-label" for="color">Cor</label>
-                <select class="custom-select select" id="brand">
-                  <option selected>Escolha</option>
+                <select class="custom-select select" required id="color">
+                  <option selected disabled value>Escolha</option>
                 </select>
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
                 <small class="form-text text-muted">Texto descritivo</small>
 
                 <label class="select-label" for="isarmored">Blindado</label>
-                <select class="custom-select select" id="brand">
+                <select class="custom-select select" required id="isarmored">
                   <option selected>Sim</option>
-                  <option selected>Não</option>
+                  <option>Não</option>
                 </select>
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
                 <small class="form-text text-muted">Texto descritivo</small>
               </div>
-
-
             </div>
-
             <label class="select-label" for="price">Preço</label>
-            <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+            <input type="number" class="form-control" required id="price" aria-describedby="basic-addon3">
             <!-- Small pode ser utilizado para dar uma descrição do select -->
             <small class="form-text text-muted">Texto descritivo</small>
             </select>
           </div>
           <div class="col">
             <label class="select-label d-flex" for="location">Localização</label>
-
             <div class="row pt-">
               <div class="col">
-                <label class="select-label" for="">Cidade</label>
-                <select class="custom-select select" id="cities">
-                  <option selected>Escolha</option>
+                <label class="select-label" for="city">Cidade</label>
+                <select class="custom-select select" required id="city">
+                  <option selected disabled value>Escolha</option>
                   <option value="1">Campinas</option>
                   <option value="2">São Paulo</option>
                   <option value="3">Rio de Janeiro</option>
@@ -175,22 +171,22 @@
               </div>
               <div class="col">
                 <label class="select-label" for="CEP">CEP</label>
-                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                <input type="text" class="form-control" required id="CEP" aria-describedby="basic-addon3">
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
                 <small class="form-text text-muted">Texto descritivo</small>
               </div>
             </div>
             <label class="select-label mt-1" for="info">Outras informações</label>
-            <textarea name="info" id="" cols="30" rows="10"></textarea>
+            <textarea name="info" id="info" cols="30" rows="10"></textarea>
             <label for="images" class="select-label">Imagens</label>
             <input class="form-control" type="file" multiple accept="image/*" id="images">
             <div class="text-center">
-              <button type="button" class="btn btn-primary btn-send-form mt-4 text-center">Publicar</button>
+              <button type="submit" class="btn btn-primary btn-send-form mt-4 text-center">Publicar</button>
             </div>
           </div>
         </div>
       </div>
-
+    </form>
   </div>
 
   <section class="mapadosite">
