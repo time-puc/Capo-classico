@@ -4,3 +4,8 @@ function sendMessage() {
 
     window.open(`https://api.whatsapp.com/send?phone=${phone}&text=${message}`);
 }
+
+// Icones da página
+window.onload = function() {
+    feather.replace()
+}

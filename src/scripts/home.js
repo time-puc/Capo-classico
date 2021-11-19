@@ -20,3 +20,8 @@ $('#carousel-example').on('slide.bs.carousel', function (e) {
         }
     }
 });
+
+// Icones da página
+window.onload = function() {
+    feather.replace()
+}
