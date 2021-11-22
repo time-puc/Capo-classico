@@ -1,20 +1,4 @@
-var dbConnection = require('../../dbconnection/dbConnection');
-var connection = dbConnection();
-
-function allBrands() {
-    connection.query('select * from marca', function(errors, result){
-        var brands = JSON.parse(JSON.stringify(result));
-        for(let i=0; i<=brands.length; i++){
-            var option = document.createElement("option");
-            option.value = brands[i];
-            option.text = brands.charAt(0).toUpperCase();
-            var select = document.getElementsById('brand');
-            select.appendChild(option);
-        };
-    });
-    //loadBrands(brands);
-};
-
+const { default: axios } = require("axios");
 
 // Icones da página
 window.onload = function() {
@@ -22,3 +6,25 @@ window.onload = function() {
     feather.replace();
     allBrands();
 }
+
+function allBrands() {
+
+    try {
+    axios.get('http://localhost:3000/marca')
+    .then(response => {
+        for(let i=0; i<=response.data.length; i++){
+            var option = document.createElement("option");
+            option.value = response.data[i];
+            option.text = response.data.charAt(0).toUpperCase();
+            var select = document.getElementsById('brand');
+            select.appendChild(option);
+        };
+    })     
+    .catch (error => {
+        alert.apply(error.message);
+        
+    }
+    
+};
+
+
