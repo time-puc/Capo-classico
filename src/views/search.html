@@ -44,12 +44,10 @@
     </header>
 
     <div class="content container">
-        <small class="link-flow ml-5 mb-3 mt-1">Home → Busca</small>
-        <h1 class="text-uppercase advertise-title mt-2 mb-4">Resultados Encontrados</h1>
         <div class="container ml-5 mr-4">
 
-            <section class="d-flex search">
-                <div class="search-sidebar">
+            <section class="d-flex search mt-3">
+                <div class="search-sidebar mt-5">
                     <div class="mb-3">
                         <h6 class="search-item-title">Localização</h6>
                         <select class="custom-select select search-dropdown mb-1" required id="search-location-estado">
@@ -89,7 +87,7 @@
                         </div>
                     </div>
 
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <h6 class="search-item-title">Anos</h6>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="version-search">
@@ -97,7 +95,7 @@
                                 2001
                             </label>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="mb-3">
                         <h6 class="search-item-title">Preço</h6>
@@ -188,19 +186,22 @@
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="transmission-search-automatica">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="transmission-search-automatica">
                             <label class="form-check-label" for="transmission-search-automatica">
                                 Automática
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="transmission-search-semiautomatica">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="transmission-search-semiautomatica">
                             <label class="form-check-label" for="transmission-search-semiautomatica">
                                 Semiautomática
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="transmission-search-automaticasequencial">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="transmission-search-automaticasequencial">
                             <label class="form-check-label" for="transmission-search-automaticasequencial">
                                 Automática sequencial
                             </label>
@@ -212,53 +213,108 @@
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="transmission-search-sequencial">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="transmission-search-sequencial">
                             <label class="form-check-label" for="transmission-search-sequencial">
                                 Sequencial
                             </label>
                         </div>
                     </div>
-                        <h6 class="search-item-title">Cor</h6>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="transmission-search-manual">
-                            <label class="form-check-label" for="transmission-search-manual">
-                                Azul
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="transmission-search-automatica">
-                            <label class="form-check-label" for="transmission-search-automatica">
-                                Branco
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="transmission-search-semiautomatica">
-                            <label class="form-check-label" for="transmission-search-semiautomatica">
-                                Vermelho
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="transmission-search-automaticasequencial">
-                            <label class="form-check-label" for="transmission-search-automaticasequencial">
-                                Verde
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="transmission-search-cvt">
-                            <label class="form-check-label" for="transmission-search-cvt">
-                                CVT
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="transmission-search-sequencial">
-                            <label class="form-check-label" for="transmission-search-sequencial">
-                                Sequencial
-                            </label>
-                        </div>
-
+                    <h6 class="search-item-title">Cor</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="color-search-azul">
+                        <label class="form-check-label" for="color-search-azul">
+                            Azul
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="color-search-branco">
+                        <label class="form-check-label" for="color-search-branco">
+                            Branco
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="color-search-vermelho">
+                        <label class="form-check-label" for="color-search-vermelho">
+                            Vermelho
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="color-search-verde">
+                        <label class="form-check-label" for="color-search-verde">
+                            Verde
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="color-search-preto">
+                        <label class="form-check-label" for="color-search-preto">
+                            Preto
+                        </label>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="color-search-amarelo">
+                        <label class="form-check-label" for="color-search-amarelo">
+                            Amarelo
+                        </label>
+                    </div>
+                    <h6 class="search-item-title">Direção</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="steering-search-mecanica">
+                        <label class="form-check-label" for="steering-search-mecanica">
+                            Mecânica
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="steering-search-hidraulica">
+                        <label class="form-check-label" for="steering-search-hidraulica">
+                            Hidráulica
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="steering-search-eletrica">
+                        <label class="form-check-label" for="steering-search-eletrica">
+                            Elétrica
+                        </label>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="steering-search-assistida">
+                        <label class="form-check-label" for="steering-search-assistida">
+                            Assistida
+                        </label>
+                    </div>
+                    <h6 class="search-item-title">Outras características</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="direction-search-mecanica">
+                        <label class="form-check-label" for="direction-search-mecanica">
+                            Com freio ABS
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="direction-search-hidraulica">
+                        <label class="form-check-label" for="direction-search-hidraulica">
+                            Blindado
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="direction-search-eletrica">
+                        <label class="form-check-label" for="direction-search-eletrica">
+                            Com alarme
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="direction-search-assistida">
+                        <label class="form-check-label" for="direction-search-assistida">
+                            Com ar-condicionado
+                        </label>
+                    </div>
                 </div>
 
                 <div class="container">
+                    <small class="link-flow ml-5 mb-3">Home → Busca</small>
+
+                    <h1 class="text-uppercase advertise-title mt-2 mb-4">Resultados Encontrados</h1>
+
+
                     <div class="row mt-4">
                         <div class="col news-col">
                             <img class="news-img" src="../assets/cars/fusca.jpg" alt="">
