@@ -45,25 +45,27 @@
 
     <div class="content container">
         <small class="link-flow ml-5 mb-3 mt-1">Home → Busca</small>
-        <h1 class="text-uppercase advertise-title mt-4">Resultados Encontrados</h1>
+        <h1 class="text-uppercase advertise-title mt-2 mb-4">Resultados Encontrados</h1>
         <div class="container ml-5 mr-4">
 
-            <section class="d-flex">
+            <section class="d-flex search">
                 <div class="search-sidebar">
                     <div class="mb-3">
                         <h6 class="search-item-title">Localização</h6>
-                        <select class="custom-select select search-dropdown" required id="search-location">
-                            <option disabled selected value disabled value>Escolha</option>
+                        <select class="custom-select select search-dropdown mb-1" required id="search-location-estado">
+                            <option disabled selected value disabled value>Estado</option>
+                        </select>
+                        <select class="custom-select select search-dropdown" required id="search-location-cidade">
+                            <option disabled selected value disabled value>Cidade</option>
                         </select>
                     </div>
 
                     <div class="mb-3">
                         <h6 class="search-item-title">Marca</h6>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="brand-search">
-                            <label class="form-check-label" for="brand-search">
-                                Marca
-                            </label>
+                        <div>
+                            <select class="custom-select select search-dropdown" required id="search-brand">
+                                <option disabled selected value disabled value>Marca</option>
+                            </select>
                         </div>
                     </div>
 
@@ -97,28 +99,26 @@
                         </div>
                     </div>
 
-
                     <div class="mb-3">
                         <h6 class="search-item-title">Preço</h6>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="version-search">
-                            <label class="form-check-label" for="version-search">
-                                2001
-                            </label>
+                        <div class="d-flex inputs-range">
+                            <input type="number" style="margin-right: 5px;" value="" placeholder="Mínimo"
+                                id="price-search-min">
+                            <input type="number" value="" placeholder="Máximo" id="price-search-max">
                         </div>
                     </div>
 
                     <div class="mb-3">
                         <h6 class="search-item-title">Condição</h6>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="condition-search">
-                            <label class="form-check-label" for="condition-search">
+                            <input class="form-check-input" type="checkbox" value="" id="condition-search-new">
+                            <label class="form-check-label" for="condition-search-new">
                                 Novo
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="condition-search">
-                            <label class="form-check-label" for="condition-search">
+                            <input class="form-check-input" type="checkbox" value="" id="condition-search-old">
+                            <label class="form-check-label" for="condition-search-old">
                                 Usado
                             </label>
                         </div>
@@ -126,11 +126,135 @@
 
                     <div class="mb-3">
                         <h6 class="search-item-title">Quilometragem</h6>
+                        <div class="d-flex inputs-range">
+                            <input type="number" style="margin-right: 5px;" value="" placeholder="Mínimo"
+                                id="km-search-min">
+                            <input type="number" value="" placeholder="Máximo" id="km-search-max">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <h6 class="search-item-title">Tipo de combustível</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="fuel-search-gasolina">
+                            <label class="form-check-label" for="fuel-search-gasolina">
+                                Gasolina
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="fuel-search-alcool">
+                            <label class="form-check-label" for="fuel-search-alcool">
+                                Álcool
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="fuel-search-diesel">
+                            <label class="form-check-label" for="fuel-search-diesel">
+                                Diesel
+                            </label>
                         <div>
                             <input class="form-check" type="number" placeholder="Mínimo">
                             <input class="form-check" type="number" placeholder="Máximo">
                         </div>
                     </div>
+
+                    <div class="mb-3">
+                        <h6 class="search-item-title">Portas</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="doors-search-2">
+                            <label class="form-check-label" for="doors-search-2">
+                                2
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="doors-search-3">
+                            <label class="form-check-label" for="doors-search-3">
+                                3
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="doors-search-4">
+                            <label class="form-check-label" for="doors-search-4">
+                                4
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <h6 class="search-item-title">Transmissão</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="transmission-search-manual">
+                            <label class="form-check-label" for="transmission-search-manual">
+                                Manual
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="transmission-search-automatica">
+                            <label class="form-check-label" for="transmission-search-automatica">
+                                Automática
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="transmission-search-semiautomatica">
+                            <label class="form-check-label" for="transmission-search-semiautomatica">
+                                Semiautomática
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="transmission-search-automaticasequencial">
+                            <label class="form-check-label" for="transmission-search-automaticasequencial">
+                                Automática sequencial
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="transmission-search-cvt">
+                            <label class="form-check-label" for="transmission-search-cvt">
+                                CVT
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="transmission-search-sequencial">
+                            <label class="form-check-label" for="transmission-search-sequencial">
+                                Sequencial
+                            </label>
+                        </div>
+                    </div>
+                        <h6 class="search-item-title">Cor</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="transmission-search-manual">
+                            <label class="form-check-label" for="transmission-search-manual">
+                                Azul
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="transmission-search-automatica">
+                            <label class="form-check-label" for="transmission-search-automatica">
+                                Branco
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="transmission-search-semiautomatica">
+                            <label class="form-check-label" for="transmission-search-semiautomatica">
+                                Vermelho
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="transmission-search-automaticasequencial">
+                            <label class="form-check-label" for="transmission-search-automaticasequencial">
+                                Verde
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="transmission-search-cvt">
+                            <label class="form-check-label" for="transmission-search-cvt">
+                                CVT
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="transmission-search-sequencial">
+                            <label class="form-check-label" for="transmission-search-sequencial">
+                                Sequencial
+                            </label>
+                        </div>
 
                 </div>
 
@@ -147,7 +271,7 @@
                                 <a class="footer-text space-btw" href="#"><i class="footer-icons"
                                         data-feather="heart"></i></a>
                             </div>
-                            <button class="btn btn-primary btn-edit">Editar</button>
+                            <button class="btn btn-primary btn-edit">Ver anúncio</button>
                             <hr>
                         </div>
                         <div class="col news-col">
@@ -161,7 +285,7 @@
                                 <a class="footer-text space-btw" href="#"><i class="footer-icons"
                                         data-feather="heart"></i></a>
                             </div>
-                            <button class="btn btn-primary btn-edit">Editar</button>
+                            <button class="btn btn-primary btn-edit">Ver anúncio</button>
                             <hr>
                         </div>
                         <div class="col news-col">
@@ -175,7 +299,7 @@
                                 <a class="footer-text space-btw" href="#"><i class="footer-icons"
                                         data-feather="heart"></i></a>
                             </div>
-                            <button class="btn btn-primary btn-edit">Editar</button>
+                            <button class="btn btn-primary btn-edit">Ver anúncio</button>
                             <hr>
                         </div>
                         <div class="col news-col">
@@ -189,7 +313,7 @@
                                 <a class="footer-text space-btw" href="#"><i class="footer-icons"
                                         data-feather="heart"></i></a>
                             </div>
-                            <button class="btn btn-primary btn-edit">Editar</button>
+                            <button class="btn btn-primary btn-edit">Ver anúncio</button>
                             <hr>
                         </div>
                         <div class="col news-col">
@@ -203,7 +327,7 @@
                                 <a class="footer-text space-btw" href="#"><i class="footer-icons"
                                         data-feather="heart"></i></a>
                             </div>
-                            <button class="btn btn-primary btn-edit">Editar</button>
+                            <button class="btn btn-primary btn-edit">Ver anúncio</button>
                             <hr>
                         </div>
                         <div class="col news-col">
@@ -217,7 +341,7 @@
                                 <a class="footer-text space-btw" href="#"><i class="footer-icons"
                                         data-feather="heart"></i></a>
                             </div>
-                            <button class="btn btn-primary btn-edit">Editar</button>
+                            <button class="btn btn-primary btn-edit">Ver anúncio</button>
                             <hr>
                         </div>
                         <div class="col news-col">
@@ -231,7 +355,7 @@
                                 <a class="footer-text space-btw" href="#"><i class="footer-icons"
                                         data-feather="heart"></i></a>
                             </div>
-                            <button class="btn btn-primary btn-edit">Editar</button>
+                            <button class="btn btn-primary btn-edit">Ver anúncio</button>
                             <hr>
                         </div>
                         <div class="col news-col">
@@ -245,7 +369,21 @@
                                 <a class="footer-text space-btw" href="#"><i class="footer-icons"
                                         data-feather="heart"></i></a>
                             </div>
-                            <button class="btn btn-primary btn-edit">Editar</button>
+                            <button class="btn btn-primary btn-edit">Ver anúncio</button>
+                            <hr>
+                        </div>
+                        <div class="col news-col">
+                            <img class="news-img" src="../assets/cars/fusca.jpg" alt="">
+                            <h5 class="advertise-css">Fusca</h5>
+                            <small class="form-text text-muted">1998</small>
+                            <p>1.6 Gasolina 16v</p>
+                            <p>2P Manual</p>
+                            <div class="space-btw">
+                                <span>R$ 20.000</span>
+                                <a class="footer-text space-btw" href="#"><i class="footer-icons"
+                                        data-feather="heart"></i></a>
+                            </div>
+                            <button class="btn btn-primary btn-edit">Ver anúncio</button>
                             <hr>
                         </div>
                     </div>
