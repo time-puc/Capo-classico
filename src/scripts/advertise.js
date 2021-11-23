@@ -19,12 +19,10 @@ function allBrands() {
             var select = document.getElementsById('brand');
             select.appendChild(option);
         };
-    })     
+    })
     .catch (error => {
         alert.apply(error.message);
-        
+
     }
-    
+
 };
-
-
