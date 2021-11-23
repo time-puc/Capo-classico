@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="../styles/advertise.css">
   <script src="https://unpkg.com/feather-icons"></script>
   <script src="../scripts/advertise.js"></script>
-  <script src="../routes/advertise.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <title>Capô Clássico</title>
 </head>
 
@@ -55,7 +55,7 @@
         <div class="row form-group">
           <div class="col">
             <label class="select-label" for="brand">Marca do veículo</label>
-            <select class="custom-select select" required id="brand">
+            <select class="custom-select select" required id="brand" onchange="selecionaModelo()">
               <option disabled selected value disabled value>Escolha</option>
 
               <!--MUDANÇAS AQUI - Geradas pela requisição ao BD-->
@@ -64,6 +64,8 @@
             <!-- Small pode ser utilizado para dar uma descrição do select -->
             <small class="form-text text-muted">Texto descritivo</small>
 
+            <label class="select-label" for="model" >Modelo do veículo</label>
+            <select class="custom-select select" required id="model">
             <label class="select-label" for="model">Modelo do veículo</label>
             <select class="custom-select select mb-1" required id="model">
               <option selected disabled value>Escolha</option>
