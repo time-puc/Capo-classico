@@ -1,0 +1,254 @@
+html,
+body {
+  height: 100%;
+  background-color: #FFFFFF;
+}
+
+/* Navbar home*/
+
+#navbar-logo {
+    height: 15%;
+    width: 170px;
+    margin-left: 10rem;
+}
+
+.navbar {
+    background-color: #F4F4F4 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #005D8F;
+}
+
+.nav-link .nav-icon {
+    height: 23px !important;
+    width: 25px !important;
+    padding-top: 5px;
+}
+
+#header-icons {
+    margin-right: 3rem;
+}
+
+#icons-div {
+    margin-right: 10rem;
+}
+
+#procureseuveiculo {
+    height: 200px;
+    width: 100%;
+    background-color: #F4F4F4;
+    align-items: center;
+}
+
+#procureseuveiculo h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #005D8F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#procureseuveiculo button, input{
+    justify-content: center;
+    align-items: center;
+}
+
+#procureseuveiculo button {
+    color: #fff;
+    margin-left: 10px;
+}
+
+#procureseuveiculo .container {
+    width: 26%;
+}
+
+.nav-links {
+    padding-left: 5rem;
+}
+
+.btn-primary {
+    background-color: #005D8F;
+}
+
+/* Mapa do site */
+
+.mapadosite {
+    background-color: #F4F4F4;
+    color: #005D8F;
+    white-space: nowrap;
+    max-height: 30rem;
+}
+
+.mapadosite a {
+    color: #005D8F;
+}
+
+.mapadosite a p h6{
+    font-size: 14px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #EFEDED;
+    width: 100%;
+    margin-top: auto;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-icons {
+    height: 1rem;
+}
+
+.footer-text {
+    color: #005D8F;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+.content {
+    background-color: #FFFFFF;
+}
+
+/* Anunciar veículo */
+/* Css dos selects e seus títulos */
+
+.advertise-title {
+    color: #005D8F;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 1.9rem !important;
+}
+
+label {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 14;
+}
+
+.container h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #7F7F7F;
+}
+
+.select-label {
+    color: #005D8F;
+}
+
+.select .custom-select {
+    color: #005D8F !important;
+}
+
+.link-flow {
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 0.1rem;
+    color: #D5D2D2;
+}
+
+.col textarea {
+    min-width: 100%;
+}
+
+/* Novidade em veiculos */
+
+.news-img {
+    max-width: 15rem;
+}
+
+.news-col span {
+    color: #005D8F;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-left: 1rem;
+    margin-top: 100px;
+}
+
+
+.news-col p {
+    color: #005D8F;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+.advertise-css {
+    padding-top: 0.5rem;
+    color: #005D8F !important;
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 1.3rem !important;
+}
+
+.space-btw {
+    display: -webkit-box!important;
+    -webkit-box-pack: justify!important;
+    -ms-flex-pack: justify!important;
+    justify-content: space-between!important;
+}
+
+.btn-edit {
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Sidebar de busca */
+
+.search-sidebar {
+    /* position: sticky; */
+    background-color: #f5f5f5;
+    width: 300px;
+    padding: 15px;
+    border-radius: 5px;
+    margin-left: -70px;
+    margin-right: 30px;
+}
+
+.search-item-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #005D8F;
+}
+
+.search-dropdown {
+    color: #005D8F;
+    background-color: #f1f9ff;
+}
+
+.form-check label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    color: #005D8F;
+    margin-left: 5px;
+}
+
+.form-check > .range-input {
+    width: 50%;
+    color: #005D8F;
+    background-color: #f1f9ff;
+    border-radius: 5px;
+    border-color: #005D8F;
+}
+
+.form-check > .range-input:focus {
+    color: #005D8F;
+    border-radius: 5px;
+    border-color: #61abb8;
+}
+
+.inputs-range input {
+    width: 50%;
+    color: #005D8F;
+    background-color: #f1f9ff;
+    border-radius: 5px;
+    border-color: #005D8F;
+}
+
+.inputs-range input::placeholder {
+    color: #005D8F;
+}

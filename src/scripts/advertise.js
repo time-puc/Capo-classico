@@ -55,5 +55,10 @@ function selecionaModelo() {
         event.preventDefault();
     }
 
-    
+    })
+    .catch (error => {
+        alert.apply(error.message);
 
+    }
+
+};
