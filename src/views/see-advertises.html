@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../styles/see-advertises.css">
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="../scripts/see-advertises.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Capô Clássico</title>
 </head>
 
@@ -53,47 +54,47 @@
 
         <div class="d-flex mt-4">
             <div class="info-box">
-                <h1 class="text-uppercase info-title pt-5">Fusca</h1>
+                <h1 class="text-uppercase info-title pt-5" id="title-advertise"></h1>
                 <div class="row align-items-start">
                     <div class="col info-cols">
                         <p>Motor do veículo</p>
-                        <span>V1</span>
+                        <span id="engine-advertise"></span>
                     </div>
                     <div class="col info-cols">
                         <p>Versão</p>
-                        <span>bla bla</span>
+                        <span id="version-advertise"></span>
                     </div>
                     <div class="col info-cols">
                         <p>Ano</p>
-                        <span>2000</span>
+                        <span id="year-advertise"></span>
                     </div>
                     <div class="col info-cols">
                         <p>Quilometragem</p>
-                        <span>88.500 Km</span>
+                        <span id="mileage-advertise"></span>
                     </div>
                 </div>
                 <div class="row align-items-start mt-4">
                     <div class="col info-cols">
                         <p>Cor</p>
-                        <span>Azul</span>
+                        <span id="colour-advertise"></span>
                     </div>
                     <div class="col info-cols">
                         <p>Combustível</p>
-                        <span>Álcool</span>
+                        <span id="fuel-advertise"></span>
                     </div>
                     <div class="col info-cols">
                         <p>Condição</p>
-                        <span>Usado</span>
+                        <span id="condition-advertise"></span>
                     </div>
                     <div class="col info-cols">
                         <p>Portas</p>
-                        <span>2</span>
+                        <span id="door-advertise"></span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col info-cols mt-4">
                         <p>Câmbio</p>
-                        <span>Manual</span>
+                        <span id="gearbox-advertise"></span>
                     </div>
                 </div>
 
@@ -102,17 +103,12 @@
                 <div class="row">
                     <div class="col info-cols info-description mt-2">
                         <p class="pb-2" style="font-weight: bold; font-size: 1rem;">Descrição</p>
-                        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi consequuntur itaque rerum
-                            corporis reprehenderit expedita ipsum eaque temporibus nostrum aliquam iste saepe incidunt,
-                            velit distinctio quo culpa nobis ut enim amet ullam ducimus commodi! Qui fugit blanditiis
-                            maxime. Odit quibusdam vero excepturi aspernatur ut impedit similique! Recusandae
-                            consectetur id
-                            veritatis.</span>
+                        <span id="description-advertise"></span>
                     </div>
                 </div>
             </div>
             <div class="info-form-box">
-                <h1 class="text-uppercase price-title mb-3">R$ 51.000</h1>
+                <h1 class="text-uppercase price-title mb-3" id="price-advertise"></h1>
                 <form>
                     <!-- <div class="form-group ">
                         <label for="name-form">Nome</label>
