@@ -62,10 +62,11 @@
             <!-- Small pode ser utilizado para dar uma descrição do select -->
             <small class="form-text text-muted">Texto descritivo</small>
 
-            <label class="select-label" for="model" >Modelo do veículo</label>
-            <select class="custom-select select" required id="model">
+            <!--<label class="select-label" for="model" >Modelo do veículo</label>
+            <select class="custom-select select" required id="model">-->
+
             <label class="select-label" for="model">Modelo do veículo</label>
-            <select class="custom-select select mb-1" required id="model">
+            <select class="custom-select select mb-1" required id="model" onchange="selecionaAno()">
               <option selected disabled value>Escolha</option>
             </select>
 
@@ -73,7 +74,7 @@
             <select class="custom-select select" required id="category">
               <option selected disabled value>Escolha</option>
             </select>
-            <!-- Small pode ser utilizado para dar uma descrição do select -->
+            <Small pode ser utilizado para dar uma descrição do select -->
             <!-- <small class="form-text text-muted">Texto descritivo</small> -->
 
             <div class="row">
