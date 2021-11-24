@@ -4,11 +4,6 @@ var versao
 
 function sendMessage() {
     window.open(`mailto:${resp.email}?subject=Tenho interesse no veículo ${resp.modelo} ${resp.versao}&body=${document.querySelector('#mensagem-form').value}`);
-    //var phone = '5511996533334'
-    //var message = document.querySelector('#mensagem-form').value
-
-    //alert('Você será encaminhado ao whatsapp do anunciante')
-    //window.open(`https://api.whatsapp.com/send?phone=${phone}&text=${message}`);
 }
 
 function loadAdvertise(id) {
@@ -40,5 +35,7 @@ function loadAdvertise(id) {
 
 // Icones da página
 window.onload = function() {
+    feather.replace()
+    
     loadAdvertise(1)
 }
