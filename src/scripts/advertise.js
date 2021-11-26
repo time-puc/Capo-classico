@@ -1,5 +1,3 @@
-const { default: axios } = require("axios");
-
 // Icones da página
 window.onload = function () {
     feather.replace();
@@ -36,8 +34,10 @@ function selecionaModelo() {
 
     axios.get(url)
         .then(response => {
+           // document.querySelector(".options_modelo").remove;
             for (let i = 0; i < (response.data).length; i++) {
                 var option = document.createElement('option');
+                option.className = 'options_modelo';
                 option.value = response.data[i].id;
                 option.text = response.data[i].nome;
                 var select = document.getElementById('model');
@@ -97,25 +97,27 @@ function selecionaVersao() {
 }
 
 function novoAnuncio() {
-
+    let preco = document.getElementById('price').value;
+    let descricao = document.getElementById('info').value;
+    let quilometragem = document.getElementById('km').value;
+    let corId = document.getElementById('color').value;
+    let condicaoId = document.getElementById('condition').value;
+    let cidadeId = document.getElementById('city').value;
+    let versaoId = document.getElementById('version').value;
+    let usuarioId = document.getElementById('').value;
+    
+    /*
     let marcaVeiculo = document.getElementById('brand').value;
     let modeloVeiculo = document.getElementById('model').value;
     let anoVeiculo = document.getElementById('year').value;
-    let versaoId = document.getElementById('version').value;
-    let condicaoId = document.getElementById('condition').value;
-    let quilometragem = document.getElementById('km').value;
     let transmissao = document.getElementById('transmission').value;
     let portas  = document.getElementById('brand').value;
     let combustivel = document.getElementById('fuel').value;
-    let corId = document.getElementById('color').value;
     let direcao = document.getElementById('steering').value;
-    let preco = document.getElementById('price').value;
-    let cidadeId = document.getElementById('city').value;
     let estadoId = document.getElementById('').value; //COMPLETAR
-    let outrasInfos = document.getElementById('info').value;
-    let imagens= document.getElementById('images').value;
+    let imagens= document.getElementById('images').value;*/
 
-    let url = 'http://localhost:3000/anuncio/inclusao' + preco  + '/' + outrasInfos  + '/' + quilometragem  + '/' + corId  + '/' + condicaoId  + '/' + cidadeId  + '/' + versaoId  + '/' + usuarioId
+    let url = 'http://localhost:3000/anuncio/inclusao/'  + preco  + '/' + descricao  + '/' + quilometragem  + '/' + corId  + '/' + condicaoId  + '/' + cidadeId  + '/' + versaoId  + '/' + usuarioId
     axios.get(url)
     .then(response => {
         alert('Publicação efetuada com sucesso!');
@@ -127,3 +129,16 @@ function novoAnuncio() {
     event.preventDefault();
     
 }
+
+function testeimg() {
+
+    let img = document.getElementById('images').value;
+
+    var myBlob = new Blob(["This is my blob content"], { type: "text/plain" });
+    console.log(myBlob);
+
+    var fd = new FormData();
+    fd.append('upl', myBlob, 'blobby.txt');
+    
+}
+
