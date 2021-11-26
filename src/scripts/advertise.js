@@ -241,7 +241,7 @@ function cidade(){
         for (let i = 0; i < (response.data).length; i++) {
             var option = document.createElement('option');
             option.className = 'cidade';
-            option.value = response.data[i].nome;
+            option.value = response.data[i].id;
             option.text = response.data[i].nome;
             var select = document.getElementById('city');
             select.appendChild(option);
@@ -278,7 +278,7 @@ function novoAnuncio() {
 
     let url = 'http://localhost:3000/anuncio/inclusao/'  + preco  + '/' + descricao  + '/' + quilometragem  + '/' + corId  + '/' + condicaoId  + '/' + cidadeId  + '/' + versaoId  + '/' + usuarioId;
     
-    axios.get(url)
+    axios.post(url)
     .then(response => {
         alert('Publicação efetuada com sucesso!');
     })
