@@ -280,12 +280,13 @@ function novoAnuncio() {
     
     axios.post(url)
     .then(response => {
-        alert('Publicação efetuada com sucesso!');
+        alert(response);
     })
     .catch(error => {
         alert(error.message)
     })
 
+    
     event.preventDefault();
 }
 
