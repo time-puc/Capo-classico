@@ -6,8 +6,13 @@ const app = express();
 //app.use(express.static(path.join(__dirname, './src/views')));
 
 //routes
-app.get('/anuncie', (req, res) =>
-res.render("advertise"));
+app.get('/anuncie', (req, res) =>{
+    res.render("advertise")
+});
+
+app.get('/veranuncio', (req,res) =>{
+    res.render("see-advertises.html")
+})
 
 app.listen(3000, function(){
     console.log('Server ON');
