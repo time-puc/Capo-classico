@@ -11,6 +11,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/search.css">
     <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../scripts/search.js"></script>
     <title>Capô Clássico</title>
 </head>
@@ -317,8 +318,22 @@
                     <h1 class="text-uppercase advertise-title mt-2 mb-4">Resultados Encontrados</h1>
 
 
-                    <div class="row mt-4">
-                        <div class="col news-col">
+                    <div class="row mt-4" id='painel_anuncios'>
+                        <div class="col news-col" id='modelo_anuncio'>
+                            <img class="news-img" src="../assets/cars/fusca.jpg" alt="">
+                            <h5 class="advertise-css" id ='modelo_nome'>Fusca</h5>
+                            <small class="form-text text-muted">1998</small>
+                            <p>1.6 Gasolina 16v</p>
+                            <p>2P Manual</p>
+                            <div class="space-btw">
+                                <span>R$ 20.000</span>
+                                <a class="footer-text space-btw" href="#" id="icone_modelo"><i class="footer-icons"
+                                        data-feather="heart"></i></a>
+                            </div>
+                            <button class="btn btn-primary btn-edit" >Ver anúncio</button>
+                            <hr>
+                        </div>
+                        <!--<div class="col news-col">
                             <img class="news-img" src="../assets/cars/fusca.jpg" alt="">
                             <h5 class="advertise-css">Fusca</h5>
                             <small class="form-text text-muted">1998</small>
@@ -429,21 +444,7 @@
                             </div>
                             <button class="btn btn-primary btn-edit">Ver anúncio</button>
                             <hr>
-                        </div>
-                        <div class="col news-col">
-                            <img class="news-img" src="../assets/cars/fusca.jpg" alt="">
-                            <h5 class="advertise-css">Fusca</h5>
-                            <small class="form-text text-muted">1998</small>
-                            <p>1.6 Gasolina 16v</p>
-                            <p>2P Manual</p>
-                            <div class="space-btw">
-                                <span>R$ 20.000</span>
-                                <a class="footer-text space-btw" href="#"><i class="footer-icons"
-                                        data-feather="heart"></i></a>
-                            </div>
-                            <button class="btn btn-primary btn-edit">Ver anúncio</button>
-                            <hr>
-                        </div>
+                        </div>!-->
                     </div>
                 </div>
             </section>
