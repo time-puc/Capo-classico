@@ -264,23 +264,14 @@ function novoAnuncio() {
     let cidadeId = document.getElementById('city').value;
     let versaoId = document.getElementById('version').value;
     let usuarioId = '2';
-    
-    /*
-    let marcaVeiculo = document.getElementById('brand').value;
-    let modeloVeiculo = document.getElementById('model').value;
-    let anoVeiculo = document.getElementById('year').value;
-    let transmissao = document.getElementById('transmission').value;
-    let portas  = document.getElementById('brand').value;
-    let combustivel = document.getElementById('fuel').value;
-    let direcao = document.getElementById('steering').value;
-    let estadoId = document.getElementById('').value; //COMPLETAR
-    let imagens= document.getElementById('images').value;*/
 
-    let url = 'http://localhost:3000/anuncio/inclusao/'  + preco  + '/' + descricao  + '/' + quilometragem  + '/' + corId  + '/' + condicaoId  + '/' + cidadeId  + '/' + versaoId  + '/' + usuarioId;
+    let data = [preco, descricao, quilometragem, corId, condicaoId, cidadeId, versaoId, usuarioId];
     
-    axios.post(url)
+    //let url = 'http://localhost:3000/anuncio/inclusao/'  + preco  + '/' + descricao  + '/' + quilometragem  + '/' + corId  + '/' + condicaoId  + '/' + cidadeId  + '/' + versaoId  + '/' + usuarioId;
+    
+    axios.post('http://localhost:3000/anuncio/inclusao', data)
     .then(response => {
-        alert(response);
+        console.log(response);
     })
     .catch(error => {
         alert(error.message)
