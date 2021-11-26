@@ -107,7 +107,7 @@
               </div>
               <div class="col">
                 <label class="select-label" for="version">Versão</label>
-                <select class="custom-select select" required id="version">
+                <select class="custom-select select" required id="version" onchange='caracteristicasCampos()'>
                   <option selected disabled value>Escolha</option>
                 </select>
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
@@ -119,7 +119,7 @@
                 <small class="form-text text-muted">Texto descritivo</small>
 
                 <label class="select-label" for="doors">Portas</label>
-                <input type="text" class="form-control" required id="doors" aria-describedby="basic-addon3">
+                <input disabled type="text" class="form-control" required id="doors" aria-describedby="basic-addon3">
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
                 <small class="form-text text-muted">Texto descritivo</small>
 
@@ -154,9 +154,8 @@
             <div class="row pt-">
               <div class="col">
                 <label class="select-label" for="state">Estado</label>
-                <select class="custom-select select" required id="state">
+                <select class="custom-select select" required id="state" onchange='cidade()'>
                   <option selected disabled value>Escolha</option>
-                  <option value="São Paulo">São Paulo</option>
                 </select>
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
                 <small class="form-text text-muted">Texto descritivo</small>
@@ -165,7 +164,6 @@
                 <label class="select-label" for="city">Cidade</label>
                 <select class="custom-select select" required id="city">
                   <option selected disabled value>Escolha</option>
-                  <option value="Campinas">Campinas</option>
                 </select>
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
                 <small class="form-text text-muted">Texto descritivo</small>
@@ -177,7 +175,7 @@
             <input class="form-control" type="file" multiple accept="image/*" id="images">
             <div class="text-center">
               <button type="submit" class="btn btn-primary btn-send-form mt-4 text-center" onclick='novoAnuncio()'>Publicar</button>
-              <button type="submit" class="btn btn-primary btn-send-form mt-4 text-center" onclick='testeimg()'>teste</button>
+              <!--<button type="submit" class="btn btn-primary btn-send-form mt-4 text-center" onclick='testeimg()'>teste</button>-->
             </div>
           </div>
         </div>
