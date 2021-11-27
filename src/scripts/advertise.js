@@ -88,6 +88,19 @@ function selecionaVersao() {
 
     let ano = document.getElementById('year').value;
     let idModelo = document.getElementById('model').value;
+
+    let url = 'http://localhost:3000/versao/ano/modelo/';
+
+    // id do mod e ano
+    
+    axios.get(url, { ano: ano, id:idModelo })
+    .then(response => {
+        console.log(response);
+    }).catch(error => {
+        alert(error.response.data)
+    })
+
+
     let url = 'http://localhost:3000/versao/'+ idModelo + '/' + ano;
 
     axios.get(url)
