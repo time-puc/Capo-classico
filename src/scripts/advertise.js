@@ -274,7 +274,6 @@ function novoAnuncio() {
         alert(error.response.data)
     })
 
-    
     event.preventDefault();
 }
 
