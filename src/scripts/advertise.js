@@ -33,7 +33,8 @@ function todasAsMarcas() {
 function selecionaModelo() {
 
     let idMarca = document.getElementById('brand').value;
-    let url = 'http://localhost:3000/modelo/' + idMarca
+    console.log(idMarca);
+    let url = 'http://localhost:3000/modelo/' + idMarca;
 
     axios.get(url)
         .then(response => {
@@ -85,23 +86,55 @@ function selecionaAno() {
 }
 
 function selecionaVersao() {
-
-    let ano = document.getElementById('year').value;
+    let anoM = document.getElementById('year').value;
     let idModelo = document.getElementById('model').value;
-
-    let url = 'http://localhost:3000/versao/ano/modelo/';
-
-    // id do mod e ano
+    console.log(anoM + ' ' + idModelo)
     
-    axios.get(url, { ano: ano, id:idModelo })
+    let url = 'http://localhost:3000/versao/ano/modelo/' + idModelo + '/' + anoM;
+
+    axios.get(url, { id:idModelo, ano:anoM })
     .then(response => {
         console.log(response);
     }).catch(error => {
         alert(error.response.data)
     })
 
+    event.preventDefault();
+    // id do mod e ano
 
-    let url = 'http://localhost:3000/versao/'+ idModelo + '/' + ano;
+    /*axios.get({
+        method: 'get',
+        url: url,
+        data:{
+            id: idModelo,
+            ano: anoM
+        }
+    }).then(response => console.log(response))
+      .catch(error => console.log('error: ', error))*/
+
+   /* axios.get(url, {id: idModelo, ano: anoM})
+    .then(response => {
+        if(document.querySelector(".versao_option") !== null){
+            document.querySelector(".versao_option").remove();
+        }
+
+        for (let i = 0; i < response.data.length; i++) {
+            var option = document.createElement('option');
+            option.className = 'versao_option';
+            option.value = response.data[i].id;
+            option.text = response.data[i].nome;
+            var select = document.getElementById('version');
+            select.appendChild(option);
+        };
+    }).catch(error => {
+        alert ('erro aqui!!!!!!!!!')
+        alert(error.response)
+    })
+
+    event.preventDefault();*/
+
+/*
+    let url = 'http://localhost:3000/versao/'+ idModelo + '/' + ano;*/
 
     axios.get(url)
     .then(response => {
