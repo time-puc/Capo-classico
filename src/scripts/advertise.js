@@ -267,14 +267,13 @@ function novoAnuncio() {
 
     let data = [preco, descricao, quilometragem, corId, condicaoId, cidadeId, versaoId, usuarioId];
     
-    //let url = 'http://localhost:3000/anuncio/inclusao/'  + preco  + '/' + descricao  + '/' + quilometragem  + '/' + corId  + '/' + condicaoId  + '/' + cidadeId  + '/' + versaoId  + '/' + usuarioId;
+    let url = 'http://localhost:3000/anuncio/inclusao/';
     
-    axios.post('http://localhost:3000/anuncio/inclusao', data)
+    axios.post(url, { preco: preco, descricao:descricao, quilometragem:quilometragem, cor_id:corId, condicao_id:condicaoId, cidade_id:cidadeId, versao_id:versaoId, usuario_id:usuarioId })
     .then(response => {
         console.log(response);
-    })
-    .catch(error => {
-        alert(error.message)
+    }).catch(error => {
+        alert(error.response.data)
     })
 
     
