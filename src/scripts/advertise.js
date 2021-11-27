@@ -264,8 +264,6 @@ function novoAnuncio() {
     let cidadeId = document.getElementById('city').value;
     let versaoId = document.getElementById('version').value;
     let usuarioId = '2';
-
-    let data = [preco, descricao, quilometragem, corId, condicaoId, cidadeId, versaoId, usuarioId];
     
     let url = 'http://localhost:3000/anuncio/inclusao/';
     
