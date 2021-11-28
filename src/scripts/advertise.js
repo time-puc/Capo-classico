@@ -1,4 +1,3 @@
-// Icones da página
 window.onload = function () {
     feather.replace();
     todasAsMarcas();
@@ -8,7 +7,6 @@ window.onload = function () {
 }
 
 function todasAsMarcas() {
-
     let url = 'http://localhost:3000/marca/'
 
     axios.get(url)
@@ -16,7 +14,7 @@ function todasAsMarcas() {
 
             for (let i = 0; i < response.data.length; i++) {
                 var option = document.createElement('option');
-                option.value = response.data[i].id;;
+                option.value = response.data[i].id;
                 option.text = response.data[i].nome;
                 var select = document.getElementById('brand');
                 select.appendChild(option);
@@ -26,14 +24,11 @@ function todasAsMarcas() {
         .catch(error => {
             alert(error.message)
         })
-
-    event.preventDefault();
 }
 
 function selecionaModelo() {
-
     let idMarca = document.getElementById('brand').value;
-    console.log(idMarca);
+
     let url = 'http://localhost:3000/modelo/' + idMarca;
 
     axios.get(url)
@@ -54,12 +49,9 @@ function selecionaModelo() {
         .catch(error => {
             alert(error.message)
         })
-
-    event.preventDefault();
 }
 
 function selecionaAno() {
-    
     let idModelo = document.getElementById('model').value;
     let url = 'http://localhost:3000/versao/' + idModelo;
 
@@ -81,60 +73,13 @@ function selecionaAno() {
     .catch(error => {
         alert(error.message)
     })
-
-    event.preventDefault();
 }
 
 function selecionaVersao() {
     let anoM = document.getElementById('year').value;
     let idModelo = document.getElementById('model').value;
-    console.log(anoM + ' ' + idModelo)
     
     let url = 'http://localhost:3000/versao/ano/modelo/' + idModelo + '/' + anoM;
-
-    axios.get(url, { id:idModelo, ano:anoM })
-    .then(response => {
-        console.log(response);
-    }).catch(error => {
-        alert(error.response.data)
-    })
-
-    event.preventDefault();
-    // id do mod e ano
-
-    /*axios.get({
-        method: 'get',
-        url: url,
-        data:{
-            id: idModelo,
-            ano: anoM
-        }
-    }).then(response => console.log(response))
-      .catch(error => console.log('error: ', error))*/
-
-   /* axios.get(url, {id: idModelo, ano: anoM})
-    .then(response => {
-        if(document.querySelector(".versao_option") !== null){
-            document.querySelector(".versao_option").remove();
-        }
-
-        for (let i = 0; i < response.data.length; i++) {
-            var option = document.createElement('option');
-            option.className = 'versao_option';
-            option.value = response.data[i].id;
-            option.text = response.data[i].nome;
-            var select = document.getElementById('version');
-            select.appendChild(option);
-        };
-    }).catch(error => {
-        alert ('erro aqui!!!!!!!!!')
-        alert(error.response)
-    })
-
-    event.preventDefault();*/
-
-/*
-    let url = 'http://localhost:3000/versao/'+ idModelo + '/' + ano;*/
 
     axios.get(url)
     .then(response => {
@@ -154,8 +99,6 @@ function selecionaVersao() {
     .catch(error => {
         alert(error.message)
     })
-
-    event.preventDefault();
 }
 
 function condicao() {
@@ -179,9 +122,6 @@ function condicao() {
     .catch(error => {
         alert(error.message)
     })
-
-    event.preventDefault();
-
 }
 
 function cor() {
@@ -205,9 +145,6 @@ function cor() {
     .catch(error => {
         alert(error.message)
     })
-
-    event.preventDefault();
-
 }
 
 function caracteristicasCampos() {
@@ -243,8 +180,6 @@ function caracteristicasCampos() {
     .catch(error => {
         alert(error.message)
     })
-
-    event.preventDefault();
 }
 
 function estado(){
@@ -270,13 +205,11 @@ function estado(){
     .catch(error => {
         alert(error.message)
     })
-
-    event.preventDefault();
 }
 
 function cidade(){
-    let cidade = document.getElementById('state').value;
-    let url = 'http://localhost:3000/cidade/' + cidade;
+    let estado = document.getElementById('state').value;
+    let url = 'http://localhost:3000/cidade/' + estado;
 
     axios.get(url)
     .then(response => {
@@ -296,12 +229,9 @@ function cidade(){
     .catch(error => {
         alert(error.message)
     })
-
-    event.preventDefault();
 }
 
 function novoAnuncio() {
-
     let preco = document.getElementById('price').value;
     let descricao = document.getElementById('info').value;
     let quilometragem = document.getElementById('km').value;
@@ -317,21 +247,7 @@ function novoAnuncio() {
     .then(response => {
         console.log(response);
     }).catch(error => {
-        alert(error.response.data)
+        console.log(error.response.data);
     })
-
-    event.preventDefault();
 }
-
-/*function testeimg() {
-
-    let img = document.getElementById('images').value;
-
-    var myBlob = new Blob(["This is my blob content"], { type: "text/plain" });
-    console.log(myBlob);
-
-    var fd = new FormData();
-    fd.append('upl', myBlob, 'blobby.txt');
-    
-}*/
 
