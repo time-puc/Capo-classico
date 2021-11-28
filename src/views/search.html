@@ -51,18 +51,18 @@
                 <div class="search-sidebar mt-5">
                     <div class="mb-3">
                         <h6 class="search-item-title">Localização</h6>
-                        <select class="custom-select select search-dropdown mb-1" required id="search-location-estado">
-                            <option disabled selected value disabled value>Estado</option>
+                        <select class="custom-select select search-dropdown mb-1" onchange="filtrar('estado',this.value)" required id="search-location-estado">
+                            <option disabled selected>Estado</option>
                         </select>
-                        <select class="custom-select select search-dropdown" required id="search-location-cidade">
-                            <option disabled selected value disabled value>Cidade</option>
+                        <select class="custom-select select search-dropdown" onchange="filtrar('cidade',this.value)" required id="search-location-cidade">
+                            <option disabled selected>Cidade</option>
                         </select>
                     </div>
 
                     <div class="mb-3">
                         <h6 class="search-item-title">Marca</h6>
                         <div>
-                            <select class="custom-select select search-dropdown" required id="search-brand">
+                            <select class="custom-select select search-dropdown" onchange="filtrar('marca',this.value)" required id="search-brand">
                                 <option disabled selected value disabled value>Marca</option>
                             </select>
                         </div>
@@ -70,244 +70,69 @@
 
                     <div class="mb-3">
                         <h6 class="search-item-title">Modelos</h6>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="model-search">
-                            <label class="form-check-label" for="model-search">
-                                Modelo 1
-                            </label>
+                        <div class="form-check" id="form-check-modelo">
                         </div>
                     </div>
 
                     <div class="mb-3">
                         <h6 class="search-item-title">Versões</h6>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="version-search">
-                            <label class="form-check-label" for="version-search">
-                                Versão
-                            </label>
+                        <div class="form-check" id="form-check-versao">
                         </div>
                     </div>
 
-                    <!-- <div class="mb-3">
-                        <h6 class="search-item-title">Anos</h6>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="version-search">
-                            <label class="form-check-label" for="version-search">
-                                2001
-                            </label>
+                    <div class="mb-3">
+                        <h6 class="search-item-title">Ano</h6>
+                        <div class="d-flex inputs-range">
+                            <input type="number" style="margin-right: 5px;" value="" placeholder="Mínimo"
+                                id="year-search-min" min="1801" max="2021" onblur="filtrar('ano_min',this.value)">
+                            <input type="number" value="" placeholder="Máximo" id="year-search-max" min="1801" max="2021" onblur="filtrar('ano_max',this.value)">
                         </div>
-                    </div> -->
+                    </div>
 
                     <div class="mb-3">
                         <h6 class="search-item-title">Preço</h6>
                         <div class="d-flex inputs-range">
                             <input type="number" style="margin-right: 5px;" value="" placeholder="Mínimo"
-                                id="price-search-min">
-                            <input type="number" value="" placeholder="Máximo" id="price-search-max">
+                                id="price-search-min" min="0" onblur="filtrar('preco_min',this.value)">
+                            <input type="number" value="" placeholder="Máximo" id="price-search-max" min="0" onblur="filtrar('preco_max',this.value)">
                         </div>
                     </div>
 
                     <div class="mb-3">
                         <h6 class="search-item-title">Condição</h6>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="condition-search-new">
-                            <label class="form-check-label" for="condition-search-new">
-                                Novo
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="condition-search-old">
-                            <label class="form-check-label" for="condition-search-old">
-                                Usado
-                            </label>
+                        <div class="form-check" id="form-check-condicao">
                         </div>
                     </div>
 
                     <div class="mb-3">
                         <h6 class="search-item-title">Quilometragem</h6>
                         <div class="d-flex inputs-range">
-                            <input type="number" style="margin-right: 5px;" value="" placeholder="Mínimo"
-                                id="km-search-min">
-                            <input type="number" value="" placeholder="Máximo" id="km-search-max">
+                            <input type="number" style="margin-right: 5px;" value="" placeholder="Mínimo" onblur="filtrar('quilometragem_min',this.value)"
+                                id="km-search-min" min="0">
+                            <input type="number" value="" placeholder="Máximo" id="km-search-max" min="0"  onblur="filtrar('quilometragem_max',this.value)">
                         </div>
                     </div>
 
                     <div class="mb-3">
                         <h6 class="search-item-title">Tipo de combustível</h6>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="fuel-search-gasolina">
-                            <label class="form-check-label" for="fuel-search-gasolina">
-                                Gasolina
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="fuel-search-alcool">
-                            <label class="form-check-label" for="fuel-search-alcool">
-                                Álcool
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="fuel-search-diesel">
-                            <label class="form-check-label" for="fuel-search-diesel">
-                                Diesel
-                            </label>
-                            <div>
-                                <input class="form-check" type="number" placeholder="Mínimo">
-                                <input class="form-check" type="number" placeholder="Máximo">
-                            </div>
+                        <div class="form-check" id="form-check-combustivel">
                         </div>
 
                         <div class="mb-3">
                             <h6 class="search-item-title">Portas</h6>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="doors-search-2">
-                                <label class="form-check-label" for="doors-search-2">
-                                    2
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="doors-search-3">
-                                <label class="form-check-label" for="doors-search-3">
-                                    3
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="doors-search-4">
-                                <label class="form-check-label" for="doors-search-4">
-                                    4
-                                </label>
+                            <div class="form-check" id="form-check-porta">
                             </div>
                         </div>
                         <div class="mb-3">
                             <h6 class="search-item-title">Transmissão</h6>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value=""
-                                    id="transmission-search-manual">
-                                <label class="form-check-label" for="transmission-search-manual">
-                                    Manual
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value=""
-                                    id="transmission-search-automatica">
-                                <label class="form-check-label" for="transmission-search-automatica">
-                                    Automática
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value=""
-                                    id="transmission-search-semiautomatica">
-                                <label class="form-check-label" for="transmission-search-semiautomatica">
-                                    Semiautomática
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value=""
-                                    id="transmission-search-automaticasequencial">
-                                <label class="form-check-label" for="transmission-search-automaticasequencial">
-                                    Automática sequencial
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="transmission-search-cvt">
-                                <label class="form-check-label" for="transmission-search-cvt">
-                                    CVT
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value=""
-                                    id="transmission-search-sequencial">
-                                <label class="form-check-label" for="transmission-search-sequencial">
-                                    Sequencial
-                                </label>
+                            <div class="form-check" id="form-check-transmissao">
                             </div>
                         </div>
                         <h6 class="search-item-title">Cor</h6>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="color-search-azul">
-                            <label class="form-check-label" for="color-search-azul">
-                                Azul
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="color-search-branco">
-                            <label class="form-check-label" for="color-search-branco">
-                                Branco
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="color-search-vermelho">
-                            <label class="form-check-label" for="color-search-vermelho">
-                                Vermelho
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="color-search-verde">
-                            <label class="form-check-label" for="color-search-verde">
-                                Verde
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="color-search-preto">
-                            <label class="form-check-label" for="color-search-preto">
-                                Preto
-                            </label>
-                        </div>
-                        <div class="form-check mb-3">
-                            <input class="form-check-input" type="checkbox" value="" id="color-search-amarelo">
-                            <label class="form-check-label" for="color-search-amarelo">
-                                Amarelo
-                            </label>
+                        <div class="form-check" id="form-check-cor">
                         </div>
                         <h6 class="search-item-title">Direção</h6>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="steering-search-mecanica">
-                            <label class="form-check-label" for="steering-search-mecanica">
-                                Mecânica
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="steering-search-hidraulica">
-                            <label class="form-check-label" for="steering-search-hidraulica">
-                                Hidráulica
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="steering-search-eletrica">
-                            <label class="form-check-label" for="steering-search-eletrica">
-                                Elétrica
-                            </label>
-                        </div>
-                        <div class="form-check mb-3">
-                            <input class="form-check-input" type="checkbox" value="" id="steering-search-assistida">
-                            <label class="form-check-label" for="steering-search-assistida">
-                                Assistida
-                            </label>
-                        </div>
-                        <h6 class="search-item-title">Outras características</h6>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="direction-search-mecanica">
-                            <label class="form-check-label" for="direction-search-mecanica">
-                                Com freio ABS
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="direction-search-hidraulica">
-                            <label class="form-check-label" for="direction-search-hidraulica">
-                                Blindado
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="direction-search-eletrica">
-                            <label class="form-check-label" for="direction-search-eletrica">
-                                Com alarme
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="direction-search-assistida">
-                            <label class="form-check-label" for="direction-search-assistida">
-                                Com ar-condicionado
-                            </label>
+                        <div class="form-check" id="form-check-direcao">
                         </div>
                     </div>
                 </div>
@@ -333,118 +158,6 @@
                             <button class="btn btn-primary btn-edit" >Ver anúncio</button>
                             <hr>
                         </div>
-                        <!--<div class="col news-col">
-                            <img class="news-img" src="../assets/cars/fusca.jpg" alt="">
-                            <h5 class="advertise-css">Fusca</h5>
-                            <small class="form-text text-muted">1998</small>
-                            <p>1.6 Gasolina 16v</p>
-                            <p>2P Manual</p>
-                            <div class="space-btw">
-                                <span>R$ 20.000</span>
-                                <a class="footer-text space-btw" href="#"><i class="footer-icons"
-                                        data-feather="heart"></i></a>
-                            </div>
-                            <button class="btn btn-primary btn-edit">Ver anúncio</button>
-                            <hr>
-                        </div>
-                        <div class="col news-col">
-                            <img class="news-img" src="../assets/cars/fusca.jpg" alt="">
-                            <h5 class="advertise-css">Fusca</h5>
-                            <small class="form-text text-muted">1998</small>
-                            <p>1.6 Gasolina 16v</p>
-                            <p>2P Manual</p>
-                            <div class="space-btw">
-                                <span>R$ 20.000</span>
-                                <a class="footer-text space-btw" href="#"><i class="footer-icons"
-                                        data-feather="heart"></i></a>
-                            </div>
-                            <button class="btn btn-primary btn-edit">Ver anúncio</button>
-                            <hr>
-                        </div>
-                        <div class="col news-col">
-                            <img class="news-img" src="../assets/cars/fusca.jpg" alt="">
-                            <h5 class="advertise-css">Fusca</h5>
-                            <small class="form-text text-muted">1998</small>
-                            <p>1.6 Gasolina 16v</p>
-                            <p>2P Manual</p>
-                            <div class="space-btw">
-                                <span>R$ 20.000</span>
-                                <a class="footer-text space-btw" href="#"><i class="footer-icons"
-                                        data-feather="heart"></i></a>
-                            </div>
-                            <button class="btn btn-primary btn-edit">Ver anúncio</button>
-                            <hr>
-                        </div>
-                        <div class="col news-col">
-                            <img class="news-img" src="../assets/cars/fusca.jpg" alt="">
-                            <h5 class="advertise-css">Fusca</h5>
-                            <small class="form-text text-muted">1998</small>
-                            <p>1.6 Gasolina 16v</p>
-                            <p>2P Manual</p>
-                            <div class="space-btw">
-                                <span>R$ 20.000</span>
-                                <a class="footer-text space-btw" href="#"><i class="footer-icons"
-                                        data-feather="heart"></i></a>
-                            </div>
-                            <button class="btn btn-primary btn-edit">Ver anúncio</button>
-                            <hr>
-                        </div>
-                        <div class="col news-col">
-                            <img class="news-img" src="../assets/cars/fusca.jpg" alt="">
-                            <h5 class="advertise-css">Fusca</h5>
-                            <small class="form-text text-muted">1998</small>
-                            <p>1.6 Gasolina 16v</p>
-                            <p>2P Manual</p>
-                            <div class="space-btw">
-                                <span>R$ 20.000</span>
-                                <a class="footer-text space-btw" href="#"><i class="footer-icons"
-                                        data-feather="heart"></i></a>
-                            </div>
-                            <button class="btn btn-primary btn-edit">Ver anúncio</button>
-                            <hr>
-                        </div>
-                        <div class="col news-col">
-                            <img class="news-img" src="../assets/cars/fusca.jpg" alt="">
-                            <h5 class="advertise-css">Fusca</h5>
-                            <small class="form-text text-muted">1998</small>
-                            <p>1.6 Gasolina 16v</p>
-                            <p>2P Manual</p>
-                            <div class="space-btw">
-                                <span>R$ 20.000</span>
-                                <a class="footer-text space-btw" href="#"><i class="footer-icons"
-                                        data-feather="heart"></i></a>
-                            </div>
-                            <button class="btn btn-primary btn-edit">Ver anúncio</button>
-                            <hr>
-                        </div>
-                        <div class="col news-col">
-                            <img class="news-img" src="../assets/cars/fusca.jpg" alt="">
-                            <h5 class="advertise-css">Fusca</h5>
-                            <small class="form-text text-muted">1998</small>
-                            <p>1.6 Gasolina 16v</p>
-                            <p>2P Manual</p>
-                            <div class="space-btw">
-                                <span>R$ 20.000</span>
-                                <a class="footer-text space-btw" href="#"><i class="footer-icons"
-                                        data-feather="heart"></i></a>
-                            </div>
-                            <button class="btn btn-primary btn-edit">Ver anúncio</button>
-                            <hr>
-                        </div>
-                        <div class="col news-col">
-                            <img class="news-img" src="../assets/cars/fusca.jpg" alt="">
-                            <h5 class="advertise-css">Fusca</h5>
-                            <small class="form-text text-muted">1998</small>
-                            <p>1.6 Gasolina 16v</p>
-                            <p>2P Manual</p>
-                            <div class="space-btw">
-                                <span>R$ 20.000</span>
-                                <a class="footer-text space-btw" href="#"><i class="footer-icons"
-                                        data-feather="heart"></i></a>
-                            </div>
-                            <button class="btn btn-primary btn-edit">Ver anúncio</button>
-                            <hr>
-                        </div>!-->
                     </div>
                 </div>
             </section>
