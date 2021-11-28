@@ -79,8 +79,33 @@ function selecionaVersao() {
     let anoM = document.getElementById('year').value;
     let idModelo = document.getElementById('model').value;
     
-    let url = 'http://localhost:3000/versao/ano/modelo/' + idModelo + '/' + anoM;
+    let url = 'http://localhost:3000/versao/ano/modelo/' + idModelo;
 
+
+    axios.get(url, {
+    params: {
+        "ano": anoM
+    }
+  }).then(response => {
+    if(document.querySelector(".versao_option") !== null){
+        document.querySelector(".versao_option").remove();
+    }
+
+    for (let i = 0; i < (response.data).length; i++) {
+        var option = document.createElement('option');
+        option.className = 'versao_option';
+        option.value = response.data[i].id;
+        option.text = response.data[i].nome;
+        var select = document.getElementById('version');
+        select.appendChild(option);
+    };
+  }).catch(error => {
+       alert(error.message)
+  });
+
+
+
+    /*
     axios.get(url)
     .then(response => {
         if(document.querySelector(".versao_option") !== null){
@@ -99,6 +124,7 @@ function selecionaVersao() {
     .catch(error => {
         alert(error.message)
     })
+    */
 }
 
 function condicao() {
