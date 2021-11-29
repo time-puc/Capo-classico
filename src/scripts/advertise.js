@@ -33,8 +33,13 @@ function selecionaModelo() {
 
     axios.get(url)
         .then(response => {
+
             if(document.querySelector(".options_modelo") !== null){
-                document.querySelector(".options_modelo").remove();
+                let modelo = document.querySelectorAll(".options_modelo");
+
+                modelo.forEach(element => {
+                    element.remove();
+                })
             }
             
             for (let i = 0; i < (response.data).length; i++) {
@@ -58,7 +63,11 @@ function selecionaAno() {
     axios.get(url)
     .then(response => {
         if(document.querySelector(".ano_option") !== null){
-            document.querySelector(".ano_option").remove();
+            let ano = document.querySelectorAll(".ano_option");
+
+            ano.forEach(element => {
+                element.remove();
+            })
         }
 
         for (let i = 0; i < (response.data).length; i++) {
@@ -88,7 +97,11 @@ function selecionaVersao() {
     }
   }).then(response => {
     if(document.querySelector(".versao_option") !== null){
-        document.querySelector(".versao_option").remove();
+        let versao = document.querySelectorAll(".versao_option");
+
+        versao.forEach(element => {
+            element.remove();
+        })
     }
 
     for (let i = 0; i < (response.data).length; i++) {
@@ -102,29 +115,6 @@ function selecionaVersao() {
   }).catch(error => {
        alert(error.message)
   });
-
-
-
-    /*
-    axios.get(url)
-    .then(response => {
-        if(document.querySelector(".versao_option") !== null){
-            document.querySelector(".versao_option").remove();
-        }
-
-        for (let i = 0; i < (response.data).length; i++) {
-            var option = document.createElement('option');
-            option.className = 'versao_option';
-            option.value = response.data[i].id;
-            option.text = response.data[i].nome;
-            var select = document.getElementById('version');
-            select.appendChild(option);
-        };
-    })
-    .catch(error => {
-        alert(error.message)
-    })
-    */
 }
 
 function condicao() {
@@ -133,7 +123,10 @@ function condicao() {
     axios.get(url)
     .then(response => {
         if(document.querySelector(".condicao") !== null){
-            document.querySelector(".condicao").remove();
+            let condicao = document.querySelectorAll(".condicao");
+            condicao.forEach(element => {
+                element.remove();
+            })
         }
 
         for (let i = 0; i < (response.data).length; i++) {
@@ -156,7 +149,11 @@ function cor() {
     axios.get(url)
     .then(response => {
         if(document.querySelector(".cor") !== null){
-            document.querySelector(".cor").remove();
+            let cor =  document.querySelectorAll(".cor");
+            cor.forEach(element => {
+                element.remove();
+            })
+
         }
 
         for (let i = 0; i < (response.data).length; i++) {
@@ -186,7 +183,11 @@ function caracteristicasCampos() {
     axios.get(url)
     .then(response => {
         if(document.querySelector(".caracteristicas") !== null){
-            document.querySelector(".caracteristicas").remove();
+            let carac = document.querySelectorAll(".caracteristicas");
+
+            carac.forEach(element => {
+                element.remove();
+            })
         }
 
         let dados = response.data[0];
@@ -216,7 +217,10 @@ function estado(){
     .then(response => {
 
         if(document.querySelector(".estado") !== null){
-            document.querySelector(".estado").remove();
+            let estado = document.querySelectorAll(".estado");
+            estado.forEach(element => {
+                element.remove();
+            })
         }
 
         for (let i = 0; i < (response.data).length; i++) {
@@ -240,7 +244,11 @@ function cidade(){
     axios.get(url)
     .then(response => {
         if(document.querySelector(".cidade") !== null){
-            document.querySelector(".cidade").remove();
+            let cidade =document.querySelector(".cidade");
+
+            cidade.forEach(element => {
+                element.remove();
+            })
         }
 
         for (let i = 0; i < (response.data).length; i++) {
