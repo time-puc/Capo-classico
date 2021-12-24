@@ -81,7 +81,7 @@
 
               <div class="col">
                 <label class="select-label" for="year">Ano</label>
-                <select class="custom-select select" required id="year">
+                <select class="custom-select select" required id="year" onchange="selecionaVersao()">
                   <option selected disabled value>Escolha</option>
                 </select>
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
@@ -95,29 +95,19 @@
                 <small class="form-text text-muted">Texto descritivo</small>
 
                 <label class="select-label" for="transmission">Transmissão</label>
-                <select class="custom-select select" required id="transmission">
-                  <option selected disabled value>Escolha</option>
-                </select>
+                <input disabled type="text" class="form-control" required id="transmission" aria-describedby="basic-addon3">
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
                 <small class="form-text text-muted">Texto descritivo</small>
 
                 <label class="select-label" for="fuel">Combustível</label>
-                <select class="custom-select select" required id="fuel">
-                  <option selected disabled value>Escolha</option>
-                </select>
+                <input disabled type="text" class="form-control" required id="fuel" aria-describedby="basic-addon3">
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
                 <small class="form-text text-muted">Texto descritivo</small>
 
-                <label class="select-label" for="steering">Direção</label>
-                <select class="custom-select select" required id="steering">
-                  <option selected disabled value>Escolha</option>
-                </select>
-                <!-- Small pode ser utilizado para dar uma descrição do select -->
-                <small class="form-text text-muted">Texto descritivo</small>
               </div>
               <div class="col">
                 <label class="select-label" for="version">Versão</label>
-                <select class="custom-select select" required id="version">
+                <select class="custom-select select" required id="version" onchange='caracteristicasCampos()'>
                   <option selected disabled value>Escolha</option>
                 </select>
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
@@ -129,9 +119,7 @@
                 <small class="form-text text-muted">Texto descritivo</small>
 
                 <label class="select-label" for="doors">Portas</label>
-                <select class="custom-select select" required id="doors">
-                  <option selected disabled value>Escolha</option>
-                </select>
+                <input disabled type="text" class="form-control" required id="doors" aria-describedby="basic-addon3">
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
                 <small class="form-text text-muted">Texto descritivo</small>
 
@@ -142,15 +130,19 @@
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
                 <small class="form-text text-muted">Texto descritivo</small>
 
-                <label class="select-label" for="isarmored">Blindado</label>
+                <!-- <label class="select-label" for="isarmored">Blindado</label>
                 <select class="custom-select select" required id="isarmored">
                   <option selected>Sim</option>
                   <option>Não</option>
-                </select>
+                </select> -->
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
-                <small class="form-text text-muted">Texto descritivo</small>
+                <!-- <small class="form-text text-muted">Texto descritivo</small> -->
               </div>
             </div>
+            <label class="select-label" for="steering">Direção</label>
+            <input disabled type="text" class="form-control" required id="steering" aria-describedby="basic-addon3">
+            <!-- Small pode ser utilizado para dar uma descrição do select -->
+            <small class="form-text text-muted">Texto descritivo</small>
             <label class="select-label" for="price">Preço</label>
             <input type="number" class="form-control" required id="price" aria-describedby="basic-addon3">
             <!-- Small pode ser utilizado para dar uma descrição do select -->
@@ -161,29 +153,29 @@
             <label class="select-label d-flex" for="location">Localização</label>
             <div class="row pt-">
               <div class="col">
-                <label class="select-label" for="city">Cidade</label>
-                <select class="custom-select select" required id="city">
+                <label class="select-label" for="state">Estado</label>
+                <select class="custom-select select" required id="state" onchange='cidade()'>
                   <option selected disabled value>Escolha</option>
-                  <option value="1">Campinas</option>
-                  <option value="2">São Paulo</option>
-                  <option value="3">Rio de Janeiro</option>
                 </select>
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
                 <small class="form-text text-muted">Texto descritivo</small>
               </div>
               <div class="col">
-                <label class="select-label" for="CEP">CEP</label>
-                <input type="text" class="form-control" required id="CEP" aria-describedby="basic-addon3">
+                <label class="select-label" for="city">Cidade</label>
+                <select class="custom-select select" required id="city">
+                  <option selected disabled value>Escolha</option>
+                </select>
                 <!-- Small pode ser utilizado para dar uma descrição do select -->
                 <small class="form-text text-muted">Texto descritivo</small>
               </div>
             </div>
             <label class="select-label mt-1" for="info">Outras informações</label>
             <textarea name="info" id="info" cols="30" rows="10"></textarea>
-            <label for="images" class="select-label">Imagens</label>
-            <input class="form-control" type="file" multiple accept="image/*" id="images">
+            <!--<label for="images" class="select-label">Imagens</label>
+            <input class="form-control" type="file" multiple accept="image/*" id="images">-->
             <div class="text-center">
-              <button type="submit" class="btn btn-primary btn-send-form mt-4 text-center">Publicar</button>
+              <button type="submit" class="btn btn-primary btn-send-form mt-4 text-center" onclick='novoAnuncio()'>Publicar</button>
+              <!--<button type="submit" class="btn btn-primary btn-send-form mt-4 text-center" onclick='testeimg()'>teste</button>-->
             </div>
           </div>
         </div>
@@ -382,18 +374,16 @@
     crossorigin="anonymous"></script>
   <script>
 
-    async function getContent() {
+    /*async function getContent() {
       try {
-        const response = await fetch('http://localhost:4000/')
+        const response = await fetch('http://localhost:3000/')
         console.log(response)
       } catch (error) {
         console.log('error')
       }
     }
-    getContent()
+    getContent()*/
 
   </script>
-
 </body>
-
 </html>
